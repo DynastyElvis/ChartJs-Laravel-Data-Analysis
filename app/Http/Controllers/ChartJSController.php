@@ -2,9 +2,10 @@
   
 namespace App\Http\Controllers;
     
-use Illuminate\Http\Request;
+use view;
 use App\Models\User;
-use DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
     
 class ChartJSController extends Controller
 {

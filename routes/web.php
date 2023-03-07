@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChartJSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('chart', [ChartJSController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// use App\Http\Controllers\ChartJSController;
+// Route::get('/chart}' , [ChartJSController::class,'index']);
+
+Route::get('/chart', [ChartJSController::class, 'index'])->name('chart.index');
